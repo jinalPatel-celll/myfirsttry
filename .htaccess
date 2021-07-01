@@ -1,0 +1,13 @@
+RewriteEngine On 
+
+					RewriteBase /jinal_demo/ 
+
+					RewriteCond %{REQUEST_URI} ^system.* 
+
+					RewriteRule ^(.*)$ /index.php/$1 [L] 
+
+					RewriteCond %{REQUEST_FILENAME} !-f 
+
+					RewriteCond %{REQUEST_FILENAME} !-d 
+
+					RewriteRule ^(.*)$ /jinal_demo/index.php/$1 [L]
